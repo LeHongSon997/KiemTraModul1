@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let intNumber = [2,3,4,5,6,7,8,10]
+
+    function findElementIndexArray(element, arr) {
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (element === arr[i]) {
+                check = true;
+                return document.write("Vị trí của " + element + " trong mảng là: " + i + "<br/>");
+            }
+        }
+        if (!check) {
+            alert("Phần tử: " + element + " không có trong mảng ")
+        }
+    }
+
+    findElementIndexArray(8, intNumber);
+    let number = +prompt("Nhập giá trị cần kiểm tra: ")
+
+    function checkNumberInArrray(number, arr) {
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (number === arr[i]) {
+                check = true;
+                return document.write("Giá trị số nguyên vừa nhập: " + number + ' ' + " nằm trong mảng ");
+            }
+        }
+        if (!check) {
+            document.write("Giá trị số nguyên vừa nhập: " + number + ' ' + " không nằm trong mảng ")
+        }
+    }
+
+    checkNumberInArrray(number, intNumber);
+</script>
+</body>
+</html>
