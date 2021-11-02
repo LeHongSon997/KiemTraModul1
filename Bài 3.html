@@ -7,24 +7,23 @@
 <body>
 <script>
 
-    function findVowel(string) {
-        let vowel = ["a", "e", "i", "o", "u"];
-        let count = 0;
-        for (let i = 0; i < string.length; i++) {
-            if (vowel.indexOf(string[i]) !== -1) {
-                count++;
-            }
-        }
-        if (count > 0) {
-            return count;
-        } else {
-            return false;
-        }
-    }
+     function findVowel(str) {
+         let count = 0;
+         for (let i = 0; i < str.length; i++) {
+             if(str[i] === "a" || str[i] === "o" || str[i] === "e" || str[i] === "u" || str[i] === "i"){
+                 count++;
+             }
+         }
+         if(count !==0 ){
+             return count;
+         }else {
+             return alert(false);
+         }
+     }
 
-    let string = prompt("nhập vào một chuỗi :");
-    findVowel(string);
-    alert('Số kí tự nguyên âm ' + ' ' + findVowel(string));
+     let str = prompt("nhập vào một chuỗi :");
+     findVowel(str);
+     alert('Số kí tự nguyên âm ' + ' ' + findVowel(str));
 
 </script>
 </body>
